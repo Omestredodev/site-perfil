@@ -629,31 +629,3 @@ span {
     gap: 1.5rem;
   }
 }
-
-
-/* Esconde o menu no mobile */
-.menu {
-  display: none;
-  list-style: none;
-  padding: 0;
-}
-
-/* Mostra quando ativo */
-.menu.active {
-  display: block;
-}
-
-/* Ícone do menu */
-.menu-toggle {
-  font-size: 28px;
-  cursor: pointer;
-  display: none; /* Oculta no desktop */
-}
-
-/* Mostra o ícone no mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-}
-
