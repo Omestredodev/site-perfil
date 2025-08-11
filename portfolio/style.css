@@ -548,3 +548,85 @@ span {
   font-size: 16px;
   color: white;
 }
+
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  /* Menu hambúrguer aparece */
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Navbar vira coluna (menu lateral ou dropdown) */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: var(--second-bg-collor);
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    display: none; /* será aberto via JS */
+  }
+
+  /* Página inicial empilha imagem e texto */
+  .home {
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 70%;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  /* Serviços em 1 coluna */
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Depoimentos em 1 coluna */
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline ocupa largura total */
+  .timeline-items::before {
+    left: 10px;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding: 0 0 0 40px;
+    text-align: left;
+  }
+  .timeline-dot {
+    left: 0;
+  }
+
+  /* Formulário empilhado */
+  .contact form {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
